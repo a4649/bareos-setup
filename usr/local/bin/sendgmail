@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SMTP_SERVER=smtp.gmail.com:587
+USER=from@gmail.pt
+PASSWORD=my-gmail-app-password
+SENDER=from@gmail.pt
+SUBJECT=$1
+RECIPIENTS=$2
+
+/usr/bin/sendemail -q -s $SMTP_SERVER -xu $USER -xp $PASSWORD -f $SENDER -u $SUBJECT -t $RECIPIENTS
